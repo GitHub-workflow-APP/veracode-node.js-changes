@@ -5,7 +5,8 @@ run-name: Veracode - SAST/SCA Not Supported Repository - ${{ github.event.client
 on:
   repository_dispatch:
     types: [veracode-not-supported]
-    
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true    
 jobs:
   register:
     uses: ./.github/workflows/veracode-check-run.yml
