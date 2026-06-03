@@ -5,7 +5,8 @@ on:
       runs_on:
         required: true
         type: string
-
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 jobs:
   cleanup_workspace:
     runs-on: ${{ fromJSON(inputs.runs_on) }}
