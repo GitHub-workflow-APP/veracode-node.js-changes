@@ -9,7 +9,8 @@ concurrency:
 on:
   repository_dispatch:
     types: [binary-ready-veracode-sast-pipeline-scan]
-
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 jobs:
   register:
     uses: ./.github/workflows/veracode-check-run.yml
